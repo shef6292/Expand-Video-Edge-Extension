@@ -1,0 +1,2 @@
+# Expand-Video-Edge-Extension
+ A chromium-based Microsoft Edge Extension to expand video content to fill the entire window.
