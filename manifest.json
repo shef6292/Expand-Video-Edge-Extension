@@ -1,0 +1,41 @@
+{
+  "name": "Expand Video",
+  "author": "Dillon Sheffield",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Expand Video content from the current open tab.",
+  "homepage_url": "https://github.com/",
+  "icons": {
+    "25": "icons/expand-video-icon25.png",
+    "48": "icons/expand-video-icon48.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "20": "icons/expand-video-icon20.png",
+      "40": "icons/expand-video-icon40.png"
+    },
+    "default_title": "Expand Video",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [ "js/content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "background": {
+    "scripts": [ "js/background.js" ],
+    "persistent": true
+  }
+}
